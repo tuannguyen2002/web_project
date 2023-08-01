@@ -76,7 +76,7 @@
         <p id="checkmatchpass">Confirm password does not match password. Please check!</p>
 
         <button type="submit" name = "submit" class="signup" onclick = "SignUp()">Sign Up</button><br><br> 
-        <div class = "BackToSignIn"><b>Already have an Account?</b><button type="button" class="back" onclick="goBack()"><u><b>Sign In</b></u></button></div>
+        <div class = "BackToSignIn"><b>Already have an Account?</b><button type="button" class="back"><u><b><a href="login.php">Sign In</a></b></u></button></div>
     </form>
 
     <script>
