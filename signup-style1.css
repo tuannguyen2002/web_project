@@ -241,9 +241,9 @@ body {
   100%{opacity: 1;}
 }
 
-/* Form sign in */
-.form-signin {
-    height: 400px;
+/* Form sign up */
+.form-signup {
+    height: 600px;
     width: 400px;
     background-color: rgba(255, 255, 255, 0.13);
     position: absolute;
@@ -257,7 +257,7 @@ body {
     padding: 50px 35px;
 }
 
-.form-signin * {
+.form-signup * {
     font-family: "Poppins", sans-serif;
     color: #fff;
     letter-spacing: 0.5px;
@@ -265,7 +265,7 @@ body {
     border: none;
 }
 
-.form-signin h2 {
+.form-signup h2 {
     font-size: 32px;
     font-weight: 500;
     line-height: 42px;
@@ -281,9 +281,9 @@ label {
 
 /* Username and password input */
 input {
-    color: black;
     height: 20px;
     width: 95%;
+    color: black;
     border-radius: 3px;
     padding: 1em;
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -307,17 +307,19 @@ input::placeholder {
 
 ::placeholder {
     color: #e5e5e5;
+    font-size: 10px;
 }
 
-/* sign in button */
-.signin {
+/* Sign up button */
+.signup {
     position: relative;
     padding: 10px 20px;
     border-radius: 3px;
-    border: 1px solid rgb(61, 106, 255);
+    border: 1px solid rgb(214, 48, 49);
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;
+    text-align: center;
     letter-spacing: 2px;
     background: transparent;
     color: #fff;
@@ -331,21 +333,21 @@ input::placeholder {
     cursor: pointer;
 }
 
-.signin:hover {
-    background: rgb(61, 106, 255);
-    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+.signup:hover {
+    background: rgb(255, 118, 117);
+    box-shadow: 0 0 30px 5px rgba(214, 48, 49, 1.0);
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
 
-.signin:hover::before {
+.signup:hover::before {
     -webkit-animation: sh02 0.5s 0s linear;
     -moz-animation: sh02 0.5s 0s linear;
     animation: sh02 0.5s 0s linear;
 }
 
-.signin::before {
+.signup::before {
     content: '';
     display: block;
     width: 0px;
@@ -379,45 +381,56 @@ input::placeholder {
     }
 }
 
-.signin:active {
+.signup:active {
     box-shadow: 0 0 0 0 transparent;
     -webkit-transition: box-shadow 0.2s ease-in;
     -moz-transition: box-shadow 0.2s ease-in;
     transition: box-shadow 0.2s ease-in;
 }
 
-.goToSignUp{
-    font-family: "Poppins", sans-serif;
-    font-size: 12px;
-}
-
-.next{
+.back {
     font-family: "Poppins", sans-serif;
     background-color: transparent;
     cursor: pointer;
     font-size: 16px;
 }
 
-.success-notification {
+p{
+    color: #ff0000;
+    display: none;
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    top: 78%;
+    left: 8%;
+    font-size: 10px;
+}
+
+.BackToSignIn{
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+}
+
+
+.sameUser-noti {
     font-family: "Poppins", sans-serif;
     position: fixed;
     top: 20px;
     left: 20px;
     background-color: rgba(255, 255, 255, 0.2);
-    color: #4CAF50;
+    color: #df0f0f;
     padding: 10px;
     border: rgba(255, 255, 255, 0.4);
     border-radius: 3px;
     animation: slideLeft 1s ease-in-out;
 }
 
-.loginFail-noti {
+.signup-fail {
     font-family: "Poppins", sans-serif;
     position: fixed;
     top: 20px;
     left: 20px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #f10707;
+    background-color: #ff6f00;
+    color: white;
     padding: 10px;
     border: rgba(255, 255, 255, 0.4);
     border-radius: 3px;
@@ -433,3 +446,16 @@ input::placeholder {
     }
 }
 
+.name{
+    display: flex;
+    
+}
+
+.first_name{
+    width: 42%;
+}
+
+.last_name{
+    width: 43%;
+    margin-left: 50px;
+}
