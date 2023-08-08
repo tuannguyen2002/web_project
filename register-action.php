@@ -36,8 +36,8 @@
                     // $pass = md5($pass);
                     if(mysqli_num_rows($resultCheckUser)>0)
                     {
-                        $_SESSION['same_user'] = "<b>Username already used. Try again!</b>";
-                        header("location:signup.php");
+                        $_SESSION['same_user'] = "Username already used. Try again!";
+                        header("location:register.php");
                         exit();
                     }
         
@@ -53,7 +53,7 @@
                     $result = mysqli_query($conn, $query);
                     if($result)
                     {
-                        $_SESSION['success_message'] = "<b>Account created successfully!</b>";
+                        $_SESSION['success_message'] = "Account created successfully!";
                         $_SESSION['registered_username'] = $user; // Lưu tên tài khoản đã đăng ký
                         $_SESSION['registered_pass'] = $pass; 
             
@@ -63,12 +63,12 @@
                     }
                 }
                 else{
-                    $_SESSION['signup-fail'] = "<b>Password must be at least 8 characters long, <br>
-                                                   Include both letters and numbers.</b>";
+                    $_SESSION['signup-fail'] = "Password must be at least <b>8 characters</b>, <br>
+                                                Include both <b>letters</b> and <b>numbers</b>.";
                     $_SESSION['email'] = $user;
                     $_SESSION['first'] = $first;
                     $_SESSION['last'] = $last;
-                    echo "<script>window.location.href='signup.php';</script>";
+                    echo "<script>window.location.href='register.php';</script>";
                     exit();
                 }
             }

@@ -18,7 +18,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="signup-style1.css">
+    <link rel="stylesheet" href="register-style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -39,45 +39,40 @@
             <?php echo $signupFail; ?>
         </div>
     <?php endif; ?>
-    
-    <div class='light x1'></div>
-    <div class='light x2'></div>
-    <div class='light x3'></div>
-    <div class='light x4'></div>
-    <div class='light x5'></div>
-    <div class='light x6'></div>
-    <div class='light x7'></div>
-    <div class='light x8'></div>
-    <div class='light x9'></div>
-    
-    <form method = "POST" class="form-signup" action = "signup-action.php">  
-        <h2>Sign Up</h2>
 
-        <div class = "name">
-            <div class = "first_name">
-                <label for="firstname">First Name*</label>
-                <input type="text" id="firstname" placeholder="Enter first name" name="firstname" value = "<?php echo $first_checkPass; ?>" required>
-            </div>
-
-            <div class = "last_name">
-                <label for="lastname">Last Name*</label>
-                <input type="text" id="lastname" placeholder="Enter last name" name="lastname"value = "<?php echo $last_checkPass; ?>" required>
-            </div>
+        <div class = "text">
+            <h1>Hello!</h1>
+            <h3>Welcome to our website.</h3>
+            <h3>Registration to using our feature.</h3>
         </div>
+        <form method = "POST" class="form-signup" action = "register-action.php">
+            <h2>Registration</h2>
 
-        <label for="username">Email*</label>
-        <input type="email" placeholder="Enter your Email" id="username" autocomplete="off" name = "username" value = "<?php echo $user_checkPass; ?>" required>
+            <div class = "name">
+                <div class = "first_name">
+                    <label for="firstname">First Name*</label>
+                    <input type="text" id="firstname" placeholder="Enter first name" name="firstname" value = "<?php echo $first_checkPass; ?>" required>
+                </div>
 
-        <label for="password">Password*</label>
-        <input type="password" id = "pass" placeholder="Must be between 8 and 30 characters" id="password" name = "pass" required>
+                <div class = "last_name">
+                    <label for="lastname">Last Name*</label>
+                    <input type="text" id="lastname" placeholder="Enter last name" name="lastname"value = "<?php echo $last_checkPass; ?>" required>
+                </div>
+            </div>
 
-        <label for="confirm-password" id="confirm-password-label">Confirm Password*</label>
-        <input type="password" id = "confpass" placeholder="Confirm your password" id="confirm-password" name = "confirm-password" required>
-        <p id="checkmatchpass">Confirm password does not match password. Please check!</p>
+            <label for="username">Email*</label>
+            <input type="email" placeholder="Enter your Email" id="username" autocomplete="off" name = "username" value = "<?php echo $user_checkPass; ?>" required>
 
-        <button type="submit" name = "submit" class="signup" onclick = "SignUp()">Sign Up</button><br><br> 
-        <div class = "BackToSignIn"><b>Already have an Account?</b><button type="button" class="back"><u><b><a href="login.php">Sign In</a></b></u></button></div>
-    </form>
+            <label for="password">Password*</label>
+            <input type="password" id = "pass" placeholder="Must be between 8 and 30 characters" id="password" name = "pass" required>
+
+            <label for="confirm-password" id="confirm-password-label">Confirm Password*</label>
+            <input type="password" id = "confpass" placeholder="Confirm your password" id="confirm-password" name = "confirm-password" required>
+            <p id="checkmatchpass">Confirm password does not match password. Please check!</p>
+
+            <button type="submit" name = "submit" class="signup" onclick = "SignUp()">Register</button><br><br> 
+            <div class = "BackToSignIn">Already have an Account? <b><a href="login.php" class = "back">Sign In</a></b></div>
+        </form>
 
     <script>
         document.querySelector('form').addEventListener('submit', function(event) {
